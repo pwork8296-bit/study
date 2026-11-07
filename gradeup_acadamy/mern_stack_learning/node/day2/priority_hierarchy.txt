@@ -1,0 +1,14 @@
+
+Complete Priority Hierarchy (Highest to Lowest)
+
+
+Priority Level	Phase / Queue	Triggered By	When Does It Run?
+1 (Highest)	Synchronous Code	Standard JS lines, loops, function calls	Immediately on the main call stack. Blocks everything else.
+2	process.nextTick Queue	process.nextTick()	Instantly after the current synchronous block or current phase operation completes.
+3	Microtask Queue	Promise.then(), catch, finally, async/await	Instantly after the process.nextTick queue empties.
+4	Phase 1: Timers	setTimeout(), setInterval()	As soon as the loop enters a new tick and the timer's ms threshold has passed.
+5	Phase 2: Pending Callbacks	System I/O errors (e.g., TCP connection ECONNREFUSED)	On the next iteration of the loop for deferred system events.
+6	Phase 3: Idle, Prepare	Internal Node.js processes	Only used internally by libuv for housekeeping.
+7	Phase 4: Poll	Incoming data, network requests, file reads	If the queue is empty, the loop will block and wait here for new events.
+8	Phase 5: Check	setImmediate()	Immediately after the Poll phase, before completing the loop tick.
+9 (Lowest)	Phase 6: Close Callbacks	.on('close'), socket.destroy()	At the absolute end of the loop tick before restarting.

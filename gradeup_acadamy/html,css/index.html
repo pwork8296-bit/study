@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GradeUp Academy</title>
+
+    <style>
+        /* GENERAL CSS */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f8;
+            color: #333;
+        }
+
+        /* 1. BACKGROUND PROPERTIES */
+        .header {
+            background-color: #17365d;
+            background-image:
+                linear-gradient(120deg, #17365d, #2879a8);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        /* 2. TEXT PROPERTIES */
+        .header h1 {
+            font-size: 36px;
+            font-family: Georgia, serif;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px black;
+        }
+
+        .description {
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 1.8;
+            word-spacing: 5px;
+            text-align: center;
+            color: #555;
+        }
+
+        .highlight {
+            color: red;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+
+        /* 3. DISPLAY PROPERTIES */
+        .display-section {
+            background-color: white;
+            padding: 25px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        /* Inline */
+        .inline-example {
+            display: inline;
+            background-color: lightblue;
+            padding: 8px;
+        }
+
+        /* Block */
+        .block-example {
+            display: block;
+            background-color: lightgreen;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        /* Inline-block */
+        .inline-block-example {
+            display: inline-block;
+            width: 120px;
+            height: 70px;
+            background-color: orange;
+            padding: 15px;
+            margin: 5px;
+            text-align: center;
+        }
+
+        /* None */
+        .none-example {
+            display: none;
+        }
+
+        /* 4. POSITION PROPERTIES */
+
+        /* Static is the default position */
+        .static-box {
+            position: static;
+            background-color: lightblue;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        /* Relative */
+        .relative-box {
+            position: relative;
+            left: 20px;
+            top: 5px;
+            background-color: lightgreen;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        /* Absolute */
+        .parent {
+            position: relative;
+            height: 150px;
+            background-color: #ddd;
+            margin: 15px 0;
+            padding: 10px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            background-color: orange;
+            padding: 15px;
+        }
+
+        /* Sticky */
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            background-color: purple;
+            color: white;
+            padding: 15px;
+            z-index: 10;
+        }
+
+        /* Fixed */
+        .fixed-box {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: red;
+            color: white;
+            padding: 15px;
+            border-radius: 50px;
+            z-index: 100;
+        }
+
+        /* 5. BACKGROUND EXAMPLES */
+        .background-section {
+            padding: 40px;
+            margin: 20px;
+            color: white;
+
+            background-color: #17365d;
+            background-image:
+                    linear-gradient(120deg,
+                        rgba(23, 54, 93, 0.9),
+                    rgba(40, 121, 168, 0.8)),
+                url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200");
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+        }
+
+        /* Common section heading */
+        h2 {
+            color: #17365d;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #17365d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>GradeUp Academy</h1>
+        <p>Empowering learners with modern skills and practical knowledge</p>
+    </header>
+
+    <!-- TEXT PROPERTIES -->
+    <section class="display-section">
+        <h2>About Us</h2>
+
+        <p class="description">
+            We provide high-quality education and practical training to help students
+            build successful careers in technology and design.
+        </p>
+
+        <p class="highlight">
+            Learn &bull; Practice &bull; Succeed
+        </p>
+    </section>
+
+    <!-- DISPLAY PROPERTIES -->
+    <section class="display-section">
+
+        <h2>Our Services</h2>
+
+        <h3>Popular Domains</h3>
+        <span class="inline-example">Web Design</span>
+        <span class="inline-example">Development</span>
+
+        <h3>Featured Programs</h3>
+        <div class="block-example">Frontend Development: HTML, CSS, JavaScript, and responsive design.</div>
+        <div class="block-example">Backend Development: Server architecture, databases, and APIs.</div>
+
+        <h3>Upcoming Batches</h3>
+        <div class="inline-block-example">Morning Batch</div>
+        <div class="inline-block-example">Weekend Batch</div>
+
+        <h3>Admissions Notice</h3>
+        <p class="none-example">
+            Previous batch registrations are now closed.
+        </p>
+        <p>New admissions are currently open for all beginner and advanced courses.</p>
+
+    </section>
+
+    <!-- POSITION PROPERTIES -->
+    <section class="display-section">
+
+        <h2>Why Choose Us</h2>
+
+        <h3>Structured Learning</h3>
+        <div class="static-box">
+            Comprehensive curriculum aligned with current industry standards and requirements.
+        </div>
+
+        <h3>Mentorship Support</h3>
+        <div class="relative-box">
+            Personalized guidance from experienced professionals throughout your journey.
+        </div>
+
+        <h3>Special Certification</h3>
+        <div class="parent">
+            Professional Full-Stack Certification Program
+
+            <div class="absolute-box">
+                Featured
+            </div>
+        </div>
+
+        <h3>Announcements</h3>
+        <p>Stay updated with our latest workshops and webinars.</p>
+        <div class="sticky-box">
+            Welcome to GradeUp Academy &mdash; Enroll Today!
+        </div>
+
+        <p>Explore our courses and campus facilities below.</p>
+        <p style="height: 400px;">
+            We offer interactive workshops, dedicated lab sessions, mock interviews, and career counseling to help you
+            achieve your professional goals.
+        </p>
+
+    </section>
+
+    <!-- BACKGROUND PROPERTIES -->
+    <section class="background-section">
+
+        <h2 style="color: white;">
+            Start Your Journey With Us
+        </h2>
+
+        <p>
+            Join thousands of successful students who have enhanced their skills
+            and transformed their careers with our expert-led programs.
+        </p>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 GradeUp Academy</p>
+        <p>Empowering Tomorrow's Tech Leaders</p>
+    </footer>
+
+    <!-- FIXED POSITION -->
+    <div class="fixed-box">
+        Contact Us
+    </div>
+
+</body>
+</html>
